@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F84EA3B235C5D5200371518 /* SyncMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84EA3A235C5D5200371518 /* SyncMusicController.swift */; };
+		1FF55C65235B0FF90095CB66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C64235B0FF90095CB66 /* AppDelegate.swift */; };
+		1FF55C67235B0FF90095CB66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C66235B0FF90095CB66 /* SceneDelegate.swift */; };
+		1FF55C69235B0FF90095CB66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C68235B0FF90095CB66 /* ViewController.swift */; };
+		1FF55C6C235B0FF90095CB66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C6A235B0FF90095CB66 /* Main.storyboard */; };
+		1FF55C6E235B0FF90095CB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C6D235B0FF90095CB66 /* Assets.xcassets */; };
+		1FF55C71235B0FF90095CB66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C6F235B0FF90095CB66 /* LaunchScreen.storyboard */; };
+		1FF55C76235B0FF90095CB66 /* TransmitMusic WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FF55C75235B0FF90095CB66 /* TransmitMusic WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FF55C7C235B0FF90095CB66 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C7A235B0FF90095CB66 /* Interface.storyboard */; };
+		1FF55C7E235B0FFA0095CB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C7D235B0FFA0095CB66 /* Assets.xcassets */; };
+		1FF55C85235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FF55C8C235B0FFA0095CB66 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */; };
+		1FF55C8E235B0FFA0095CB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */; };
+		1FF55CA3235B10CF0095CB66 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */; };
+		1FF55CA4235B10CF0095CB66 /* LocalMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */; };
+		1FF55CA5235B10CF0095CB66 /* LocalMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */; };
+		1FF55CA6235B10CF0095CB66 /* ItemMusicRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */; };
+		1FF55CA8235C32FA0095CB66 /* DocumentMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FF55C77235B0FF90095CB66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF55C59235B0FF80095CB66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FF55C74235B0FF90095CB66;
+			remoteInfo = "TransmitMusic WatchKit App";
+		};
+		1FF55C86235B0FFA0095CB66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FF55C59235B0FF80095CB66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FF55C83235B0FFA0095CB66;
+			remoteInfo = "TransmitMusic WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FF55C95235B0FFA0095CB66 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1FF55C85235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF55C99235B0FFA0095CB66 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1FF55C76235B0FF90095CB66 /* TransmitMusic WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F84EA3A235C5D5200371518 /* SyncMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMusicController.swift; sourceTree = "<group>"; };
+		1FF55C61235B0FF80095CB66 /* TransmitMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmitMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF55C64235B0FF90095CB66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FF55C66235B0FF90095CB66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1FF55C68235B0FF90095CB66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FF55C6B235B0FF90095CB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FF55C6D235B0FF90095CB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FF55C70235B0FF90095CB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FF55C72235B0FF90095CB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF55C75235B0FF90095CB66 /* TransmitMusic WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransmitMusic WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF55C7B235B0FF90095CB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1FF55C7D235B0FFA0095CB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FF55C7F235B0FFA0095CB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TransmitMusic WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FF55C8F235B0FFA0095CB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "../../LocalMusic/LocalMusic WatchKit Extension/InterfaceController.swift"; sourceTree = "<group>"; };
+		1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMusicManager.swift; sourceTree = "<group>"; };
+		1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMusicController.swift; sourceTree = "<group>"; };
+		1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemMusicRowController.swift; sourceTree = "<group>"; };
+		1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMusicController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FF55C5E235B0FF80095CB66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF55C81235B0FFA0095CB66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FF55C58235B0FF80095CB66 = {
+			isa = PBXGroup;
+			children = (
+				1FF55C63235B0FF80095CB66 /* TransmitMusic */,
+				1FF55C79235B0FF90095CB66 /* TransmitMusic WatchKit App */,
+				1FF55C88235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */,
+				1FF55C62235B0FF80095CB66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FF55C62235B0FF80095CB66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FF55C61235B0FF80095CB66 /* TransmitMusic.app */,
+				1FF55C75235B0FF90095CB66 /* TransmitMusic WatchKit App.app */,
+				1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FF55C63235B0FF80095CB66 /* TransmitMusic */ = {
+			isa = PBXGroup;
+			children = (
+				1FF55C64235B0FF90095CB66 /* AppDelegate.swift */,
+				1FF55C66235B0FF90095CB66 /* SceneDelegate.swift */,
+				1FF55C68235B0FF90095CB66 /* ViewController.swift */,
+				1FF55C6A235B0FF90095CB66 /* Main.storyboard */,
+				1FF55C6D235B0FF90095CB66 /* Assets.xcassets */,
+				1FF55C6F235B0FF90095CB66 /* LaunchScreen.storyboard */,
+				1FF55C72235B0FF90095CB66 /* Info.plist */,
+				1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */,
+				1F84EA3A235C5D5200371518 /* SyncMusicController.swift */,
+			);
+			path = TransmitMusic;
+			sourceTree = "<group>";
+		};
+		1FF55C79235B0FF90095CB66 /* TransmitMusic WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1FF55C7A235B0FF90095CB66 /* Interface.storyboard */,
+				1FF55C7D235B0FFA0095CB66 /* Assets.xcassets */,
+				1FF55C7F235B0FFA0095CB66 /* Info.plist */,
+			);
+			path = "TransmitMusic WatchKit App";
+			sourceTree = "<group>";
+		};
+		1FF55C88235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */,
+				1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */,
+				1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */,
+				1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */,
+				1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */,
+				1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */,
+				1FF55C8F235B0FFA0095CB66 /* Info.plist */,
+			);
+			path = "TransmitMusic WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FF55C60235B0FF80095CB66 /* TransmitMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF55C9A235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic" */;
+			buildPhases = (
+				1FF55C5D235B0FF80095CB66 /* Sources */,
+				1FF55C5E235B0FF80095CB66 /* Frameworks */,
+				1FF55C5F235B0FF80095CB66 /* Resources */,
+				1FF55C99235B0FFA0095CB66 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FF55C78235B0FF90095CB66 /* PBXTargetDependency */,
+			);
+			name = TransmitMusic;
+			productName = TransmitMusic;
+			productReference = 1FF55C61235B0FF80095CB66 /* TransmitMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FF55C74235B0FF90095CB66 /* TransmitMusic WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF55C96235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic WatchKit App" */;
+			buildPhases = (
+				1FF55C73235B0FF90095CB66 /* Resources */,
+				1FF55C95235B0FFA0095CB66 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FF55C87235B0FFA0095CB66 /* PBXTargetDependency */,
+			);
+			name = "TransmitMusic WatchKit App";
+			productName = "TransmitMusic WatchKit App";
+			productReference = 1FF55C75235B0FF90095CB66 /* TransmitMusic WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1FF55C83235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FF55C92235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic WatchKit Extension" */;
+			buildPhases = (
+				1FF55C80235B0FFA0095CB66 /* Sources */,
+				1FF55C81235B0FFA0095CB66 /* Frameworks */,
+				1FF55C82235B0FFA0095CB66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TransmitMusic WatchKit Extension";
+			productName = "TransmitMusic WatchKit Extension";
+			productReference = 1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FF55C59235B0FF80095CB66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = chenwei;
+				TargetAttributes = {
+					1FF55C60235B0FF80095CB66 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					1FF55C74235B0FF90095CB66 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					1FF55C83235B0FFA0095CB66 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 1FF55C5C235B0FF80095CB66 /* Build configuration list for PBXProject "TransmitMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FF55C58235B0FF80095CB66;
+			productRefGroup = 1FF55C62235B0FF80095CB66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FF55C60235B0FF80095CB66 /* TransmitMusic */,
+				1FF55C74235B0FF90095CB66 /* TransmitMusic WatchKit App */,
+				1FF55C83235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FF55C5F235B0FF80095CB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF55C71235B0FF90095CB66 /* LaunchScreen.storyboard in Resources */,
+				1FF55C6E235B0FF90095CB66 /* Assets.xcassets in Resources */,
+				1FF55C6C235B0FF90095CB66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF55C73235B0FF90095CB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF55C7E235B0FFA0095CB66 /* Assets.xcassets in Resources */,
+				1FF55C7C235B0FF90095CB66 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF55C82235B0FFA0095CB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF55C8E235B0FFA0095CB66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FF55C5D235B0FF80095CB66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F84EA3B235C5D5200371518 /* SyncMusicController.swift in Sources */,
+				1FF55CA8235C32FA0095CB66 /* DocumentMusicController.swift in Sources */,
+				1FF55C69235B0FF90095CB66 /* ViewController.swift in Sources */,
+				1FF55C65235B0FF90095CB66 /* AppDelegate.swift in Sources */,
+				1FF55C67235B0FF90095CB66 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FF55C80235B0FFA0095CB66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FF55CA4235B10CF0095CB66 /* LocalMusicManager.swift in Sources */,
+				1FF55CA5235B10CF0095CB66 /* LocalMusicController.swift in Sources */,
+				1FF55C8C235B0FFA0095CB66 /* ExtensionDelegate.swift in Sources */,
+				1FF55CA3235B10CF0095CB66 /* InterfaceController.swift in Sources */,
+				1FF55CA6235B10CF0095CB66 /* ItemMusicRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FF55C78235B0FF90095CB66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FF55C74235B0FF90095CB66 /* TransmitMusic WatchKit App */;
+			targetProxy = 1FF55C77235B0FF90095CB66 /* PBXContainerItemProxy */;
+		};
+		1FF55C87235B0FFA0095CB66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FF55C83235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */;
+			targetProxy = 1FF55C86235B0FFA0095CB66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FF55C6A235B0FF90095CB66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF55C6B235B0FF90095CB66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FF55C6F235B0FF90095CB66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF55C70235B0FF90095CB66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1FF55C7A235B0FF90095CB66 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FF55C7B235B0FF90095CB66 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FF55C90235B0FFA0095CB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FF55C91235B0FFA0095CB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FF55C93235B0FFA0095CB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				INFOPLIST_FILE = "TransmitMusic WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		1FF55C94235B0FFA0095CB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				INFOPLIST_FILE = "TransmitMusic WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		1FF55C97235B0FFA0095CB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				IBSC_MODULE = TransmitMusic_WatchKit_Extension;
+				INFOPLIST_FILE = "TransmitMusic WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		1FF55C98235B0FFA0095CB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				IBSC_MODULE = TransmitMusic_WatchKit_Extension;
+				INFOPLIST_FILE = "TransmitMusic WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		1FF55C9B235B0FFA0095CB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				INFOPLIST_FILE = TransmitMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic;
+				PRODUCT_NAME = TransmitMusic;
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FF55C9C235B0FFA0095CB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6GM4475WAQ;
+				INFOPLIST_FILE = TransmitMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic;
+				PRODUCT_NAME = TransmitMusic;
+				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FF55C5C235B0FF80095CB66 /* Build configuration list for PBXProject "TransmitMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF55C90235B0FFA0095CB66 /* Debug */,
+				1FF55C91235B0FFA0095CB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF55C92235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF55C93235B0FFA0095CB66 /* Debug */,
+				1FF55C94235B0FFA0095CB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF55C96235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF55C97235B0FFA0095CB66 /* Debug */,
+				1FF55C98235B0FFA0095CB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FF55C9A235B0FFA0095CB66 /* Build configuration list for PBXNativeTarget "TransmitMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FF55C9B235B0FFA0095CB66 /* Debug */,
+				1FF55C9C235B0FFA0095CB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FF55C59235B0FF80095CB66 /* Project object */;
+}

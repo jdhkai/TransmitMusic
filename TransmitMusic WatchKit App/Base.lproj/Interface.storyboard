@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q84-cq-FzM">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="2ey-92-U28">
+            <objects>
+                <controller alwaysBounce="YES" fullBounds="YES" id="Q84-cq-FzM" customClass="InterfaceController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <nowPlayingView alignment="left" id="SIb-C9-jeL"/>
+                    </items>
+                    <connections>
+                        <segue destination="uTv-Xi-Heo" kind="relationship" relationship="nextPage" id="dVv-Ww-U8j"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="5550" y="1231"/>
+        </scene>
+        <!--Local Music Controller-->
+        <scene sceneID="1aS-UI-cQd">
+            <objects>
+                <controller alwaysBounce="YES" fullBounds="YES" id="uTv-Xi-Heo" customClass="LocalMusicController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="dko-r6-ko3">
+                            <items>
+                                <tableRow identifier="ItemMusicRowController" id="gVr-tR-I2J" customClass="ItemMusicRowController" customModule="TransmitMusic_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="bnl-qU-I0K">
+                                        <items>
+                                            <label width="1" height="100" alignment="left" text="歌曲名称" textAlignment="left" id="jUW-6C-Ft6"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="jUW-6C-Ft6" id="uVX-RG-xeT"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="musicTable" destination="dko-r6-ko3" id="G7r-bz-5tS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="5838" y="1231"/>
+        </scene>
+    </scenes>
+</document>
