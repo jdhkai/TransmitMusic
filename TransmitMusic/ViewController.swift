@@ -117,6 +117,9 @@ extension ViewController : WCSessionDelegate{
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print(#function)
     }
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        replyHandler(["":""])
+    }
     
 }
 

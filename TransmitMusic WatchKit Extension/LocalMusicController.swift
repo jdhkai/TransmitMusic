@@ -18,10 +18,13 @@ class LocalMusicController : InterfaceController{
     var audioPlayer: AVAudioPlayer?
     //当前正在播放的索引
     var currentPlayIndex = -1
-    //准备敀的索引
+    //准备播放的索引
     var preparePlayIndex = -1
     //是否循环
     var loop = true
+    
+    //中断前的播放状态
+    var interruptPlayStatus = false
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -69,14 +72,28 @@ class LocalMusicController : InterfaceController{
             let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
                 return
         }
+        print(type.rawValue)
         if type == .began {
             // Interruption began, take appropriate actions
+            if let player = self.audioPlayer{
+                interruptPlayStatus = player.isPlaying
+            }
+            else{
+                interruptPlayStatus = false
+            }
         }
         else if type == .ended {
             if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
                 let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
                 if options.contains(.shouldResume) {
                     // Interruption Ended - playback should resume
+                    if interruptPlayStatus{
+                        if let player = self.audioPlayer{
+                            if !player.isPlaying {
+                                player.play()
+                            }
+                        }
+                    }
                 } else {
                     // Interruption Ended - playback should NOT resume
                 }
@@ -152,7 +169,7 @@ class LocalMusicController : InterfaceController{
             do{
                 try audioPlayer = AVAudioPlayer(contentsOf: fileURL)
 //                audioPlayer?.pan = 0.0
-                audioPlayer?.volume = 0.5
+//                audioPlayer?.volume = 0.5
                 audioPlayer?.delegate = self
                 return true
             }
@@ -178,6 +195,7 @@ class LocalMusicController : InterfaceController{
         commandCenter.playCommand.addTarget { [unowned self] event in
             if let player = self.audioPlayer{
                 if !player.isPlaying {
+                    self.setupRemoteNowPlaying(songName: LocalMusicManager.shareInstance().getAllSong()[self.currentPlayIndex])
                     player.play()
                     return .success
                 }
@@ -240,7 +258,12 @@ class LocalMusicController : InterfaceController{
     func initSession() -> Bool {
         let session = AVAudioSession.sharedInstance()
         do{
-            try session.setCategory(.playback, mode: .default,policy: .longFormAudio, options: [])
+            if UserDefaultUtils.supportSpeaker(){
+                try session.setCategory(.soloAmbient, mode: .default,policy: .default, options: [])
+            }
+            else{
+                try session.setCategory(.playback, mode: .default,policy: .longFormAudio, options: [])
+            }
         }
         catch{
             print(error)

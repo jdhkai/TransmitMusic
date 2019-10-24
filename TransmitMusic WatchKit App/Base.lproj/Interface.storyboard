@@ -1,29 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q84-cq-FzM">
-    <device id="watch38"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5pC-Qe-cCr">
+    <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--正在播放-->
         <scene sceneID="2ey-92-U28">
             <objects>
-                <controller alwaysBounce="YES" fullBounds="YES" id="Q84-cq-FzM" customClass="InterfaceController" customModule="TransmitMusic_WatchKit_Extension">
+                <controller title="正在播放" id="Q84-cq-FzM" customClass="InterfaceController" customModule="TransmitMusic_WatchKit_Extension">
                     <items>
                         <nowPlayingView alignment="left" id="SIb-C9-jeL"/>
                     </items>
                     <connections>
-                        <segue destination="uTv-Xi-Heo" kind="relationship" relationship="nextPage" id="dVv-Ww-U8j"/>
+                        <segue destination="uTv-Xi-Heo" kind="relationship" relationship="nextPage" id="gCM-8c-cr7"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="5550" y="1231"/>
+            <point key="canvasLocation" x="5549" y="1390"/>
         </scene>
-        <!--Local Music Controller-->
+        <!--音乐播放-->
+        <scene sceneID="usC-pY-4iF">
+            <objects>
+                <controller title="音乐播放" alwaysBounce="YES" fullBounds="YES" id="5pC-Qe-cCr" customClass="MusicPlayerControlle" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" verticalAlignment="center" layout="vertical" id="9t0-pC-Tyw">
+                            <items>
+                                <group alignment="center" radius="30" spacing="0.0" id="i8x-fz-yZr">
+                                    <items>
+                                        <group alignment="center" radius="25" id="qJZ-sB-vTb">
+                                            <items>
+                                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" image="music_thumbnail" id="0xw-3O-gn7">
+                                                    <color key="tintColor" red="1" green="0.57547706620000005" blue="0.41908599159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </items>
+                                            <color key="backgroundColor" red="1" green="0.57547706620000005" blue="0.41908599159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="center" id="ACV-zt-ps0">
+                                    <items>
+                                        <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="shuffle" catalog="system" id="B02-PK-Mdv">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="setLoopStyle" destination="5pC-Qe-cCr" id="P7U-KH-GLa"/>
+                                            </connections>
+                                        </button>
+                                        <group alignment="left" layout="vertical" id="TAF-vd-07Z">
+                                            <items>
+                                                <label width="1" alignment="left" verticalAlignment="center" text="歌曲名称" textAlignment="center" id="1qY-BT-mgV"/>
+                                                <label width="1" alignment="left" verticalAlignment="center" text="- 歌手名称 -" textAlignment="center" id="Oid-iY-pcb">
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="music.note.list" catalog="system" id="5Up-J0-RIA">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="e8V-QN-PQb" kind="push" id="CQi-gU-PwY"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="10"/>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="center" layout="overlap" id="dqI-3t-bgM">
+                                    <items>
+                                        <group width="1" alignment="left" verticalAlignment="center" id="9nV-cl-9fJ">
+                                            <items>
+                                                <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="backward.end" catalog="system" id="pZz-7O-nh3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="playPreviousTrack" destination="5pC-Qe-cCr" id="3Cx-vy-df2"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="32" height="31" alignment="center" backgroundImage="play.circle" catalog="system" id="8DX-I5-IgM">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="playOrPauseSong" destination="5pC-Qe-cCr" id="NZ4-cz-HIN"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="20" height="20" alignment="right" verticalAlignment="center" backgroundImage="forward.end" catalog="system" id="bMj-XN-BnM">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="playNextTrack" destination="5pC-Qe-cCr" id="8g8-J4-uad"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                            <edgeInsets key="margins" left="30" right="30" top="5" bottom="5"/>
+                                        </group>
+                                        <slider width="1" alignment="left" verticalAlignment="bottom" hidden="YES" maximum="100" steps="10" id="hS9-Q0-Cb5">
+                                            <connections>
+                                                <action selector="volumeSliderChange:" destination="5pC-Qe-cCr" id="653-EP-rqh"/>
+                                            </connections>
+                                        </slider>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="coverBackgroundGroup" destination="i8x-fz-yZr" id="Ztk-KF-3rc"/>
+                        <outlet property="coverImage" destination="0xw-3O-gn7" id="pla-cd-qFV"/>
+                        <outlet property="loopButton" destination="B02-PK-Mdv" id="9oU-HO-71c"/>
+                        <outlet property="musicListButton" destination="5Up-J0-RIA" id="Byh-0m-8nj"/>
+                        <outlet property="nextButton" destination="bMj-XN-BnM" id="KPw-U5-Y6e"/>
+                        <outlet property="playButton" destination="8DX-I5-IgM" id="lzV-Td-8HH"/>
+                        <outlet property="previousButton" destination="pZz-7O-nh3" id="TSb-Fl-M8x"/>
+                        <outlet property="singerLabel" destination="Oid-iY-pcb" id="cum-Dj-4Fr"/>
+                        <outlet property="songOperateGroup" destination="9nV-cl-9fJ" id="iAL-Kp-POB"/>
+                        <outlet property="songnameLabel" destination="1qY-BT-mgV" id="W5s-X2-GVG"/>
+                        <outlet property="volumeSlider" destination="hS9-Q0-Cb5" id="mAH-jk-3Qi"/>
+                        <segue destination="MgO-7I-Hbn" kind="relationship" relationship="nextPage" id="fXB-CN-ral"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="5754.1304347826081" y="935.75892857142856"/>
+        </scene>
+        <!--专辑列表-->
+        <scene sceneID="bs8-V2-ccH">
+            <objects>
+                <controller title="专辑列表" id="MgO-7I-Hbn" customClass="AlbumController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="nUc-m2-yeO">
+                            <items>
+                                <tableRow identifier="ItemAlbumRowController" id="sfN-Nh-Fxv" customClass="ItemAlbumRowController" customModule="TransmitMusic_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="dzy-XE-2S8">
+                                        <items>
+                                            <group alignment="left" verticalAlignment="center" radius="8" id="PN6-hY-Xz9">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" id="2jN-yT-ZeX"/>
+                                                </items>
+                                            </group>
+                                            <label alignment="left" verticalAlignment="center" text="专辑名称" id="2cJ-mf-8bq">
+                                                <fontDescription key="font" type="system" weight="heavy" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="albumImage" destination="2jN-yT-ZeX" id="Bdp-14-P5w"/>
+                                        <outlet property="albumNameLabel" destination="2cJ-mf-8bq" id="42H-gh-NGH"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="albumTable" destination="nUc-m2-yeO" id="Zsf-3V-7bq"/>
+                        <segue destination="X6s-sZ-Voq" kind="relationship" relationship="nextPage" id="mAu-5u-79M"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6065" y="823"/>
+        </scene>
+        <!--播放列表-->
+        <scene sceneID="M7Z-68-RAt">
+            <objects>
+                <controller identifier="SongController" title="播放列表" id="e8V-QN-PQb" customClass="SongController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="9f6-ra-eoE">
+                            <items>
+                                <tableRow identifier="ItemSongRowController" id="zn7-7B-nIw" customClass="ItemSongRowController" customModule="TransmitMusic_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="vi5-ar-V29">
+                                        <items>
+                                            <group alignment="left" verticalAlignment="center" radius="8" id="mQh-Wj-NdS">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" id="Hur-Mx-Fzh"/>
+                                                </items>
+                                            </group>
+                                            <label alignment="left" verticalAlignment="center" text="歌曲名称" id="fyq-lI-GBS"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="songImage" destination="Hur-Mx-Fzh" id="XTS-JF-J4P"/>
+                                        <outlet property="songNameLabel" destination="fyq-lI-GBS" id="9er-PQ-mNW"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="songTable" destination="9f6-ra-eoE" id="Jyw-9m-EeS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6065" y="1088"/>
+        </scene>
+        <!--本地音乐-->
         <scene sceneID="1aS-UI-cQd">
             <objects>
-                <controller alwaysBounce="YES" fullBounds="YES" id="uTv-Xi-Heo" customClass="LocalMusicController" customModule="TransmitMusic_WatchKit_Extension">
+                <controller title="本地音乐" id="uTv-Xi-Heo" customClass="LocalMusicController" customModule="TransmitMusic_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="dko-r6-ko3">
                             <items>
@@ -40,12 +212,72 @@
                             </items>
                         </table>
                     </items>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="musicTable" destination="dko-r6-ko3" id="G7r-bz-5tS"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="5838" y="1231"/>
+            <point key="canvasLocation" x="5844" y="1391"/>
+        </scene>
+        <!--远程同步-->
+        <scene sceneID="Plj-Aw-T1Z">
+            <objects>
+                <controller title="远程同步" alwaysBounce="YES" fullBounds="YES" id="X6s-sZ-Voq" customClass="FileTransferController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="90" alignment="left" verticalAlignment="center" image="exclamationmark.triangle.fill" catalog="system" contentMode="scaleAspectFit" id="r9A-pG-VSo">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label width="1" alignment="left" verticalAlignment="center" text="请在iPhone上打开“五点半音乐”APP" textAlignment="center" numberOfLines="0" id="ZoS-4m-Yn1"/>
+                    </items>
+                    <menu key="menu" id="8j4-Sg-W91">
+                        <items>
+                            <menuItem title="重置" icon="repeat" id="3a3-kg-vEi">
+                                <connections>
+                                    <action selector="resetStatus" destination="X6s-sZ-Voq" id="Esl-vO-PNf"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="connectImage" destination="r9A-pG-VSo" id="p61-06-Zbw"/>
+                        <outlet property="tipLabel" destination="ZoS-4m-Yn1" id="7nb-g6-axt"/>
+                        <segue destination="9CR-SG-c5k" kind="relationship" relationship="nextPage" id="0Fj-01-BI3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6320" y="823"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="ivc-9v-nL8">
+            <objects>
+                <controller title="设置" alwaysBounce="YES" fullBounds="YES" id="9CR-SG-c5k" customClass="SettingController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" title="允许扬声器播放" id="dAU-Vh-AF4">
+                            <connections>
+                                <action selector="speakerEnable:" destination="9CR-SG-c5k" id="5EK-MK-HuJ"/>
+                            </connections>
+                        </switch>
+                        <label alignment="left" text="允许扬声器播放后，在没有连接蓝牙耳机的情况下会使用扬声器播放。" numberOfLines="0" id="suu-rB-hcG">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="speakerSwitch" destination="dAU-Vh-AF4" id="waw-ws-b1K"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6567" y="823"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backward.end" catalog="system" width="64" height="60"/>
+        <image name="exclamationmark.triangle.fill" catalog="system" width="64" height="56"/>
+        <image name="forward.end" catalog="system" width="64" height="60"/>
+        <image name="music.note.list" catalog="system" width="64" height="56"/>
+        <image name="music_thumbnail" width="150" height="150"/>
+        <image name="play.circle" catalog="system" width="64" height="62"/>
+        <image name="shuffle" catalog="system" width="64" height="46"/>
+    </resources>
 </document>
