@@ -8,6 +8,7 @@
 
 import Foundation
 import WatchKit
+import Kingfisher
 
 class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
     @IBOutlet weak var coverImage: WKInterfaceImage!
@@ -34,16 +35,19 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
     // 当前页面是否可见
     var pageVisible: Bool = false
     
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         crownSequencer.delegate = self
         
         setupInitUI()
         
+        
         // 添加通知监听
         NotificationCenter.default.addObserver(self, selector: #selector(playMusicChange), name: .MUSIC_PLAY_ITEM_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playStateChange), name: .MUSIC_PLAY_STATE_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(screenLockChange), name: .SCREEN_LOCK_CHANGE, object: nil)
+        
     }
     
     override func willActivate() {
@@ -84,9 +88,10 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
             let audioPlayer = LocalMusicManager.shareInstance().getPlayer()
             var progress = 0
             if let player = audioPlayer{
-                progress = Int(player.currentTime / player.duration)
+                progress = Int(player.currentTime*100 / player.duration)
             }
             self.coverBackgroundGroup.setBackgroundImage(self.createProgress(defaultColor: .gray, selectedColor: .green, progress: progress))
+            self.crownSequencer.focus()
         })
     }
     
@@ -130,21 +135,12 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
             songnameLabel.setText(song.songName)
             singerLabel.setText(song.artist)
             let optionURL = URL(string: song.thumbnail)
-            if let url = optionURL {
-                do{
-                    try coverImage.setImageData(Data(contentsOf: url))
-                }catch{
-                    coverImage.setImageNamed("music_thumbnail")
-                }
-            }
-            else{
-                coverImage.setImageNamed("music_thumbnail")
-            }
+            coverImage.kf.setImage(with: optionURL, placeholder: KFCrossPlatformImage(named: "music"), options: nil, progressBlock: nil, completionHandler: nil)
         }
         else{
             songnameLabel.setText("暂无音乐")
             singerLabel.setText("请在iPhone上添加音乐")
-            coverImage.setImageNamed("music_thumbnail")
+            coverImage.setImageNamed("music")
         }
     }
     
@@ -174,7 +170,7 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
     
     // 播放或暂停歌曲
     @IBAction func playOrPauseSong() {
-        LocalMusicManager.shareInstance().playOrPause(!LocalMusicManager.shareInstance().isPlaying())
+        LocalMusicManager.shareInstance().playOrPause()
     }
     
     // 播放上一首
@@ -189,6 +185,7 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
     
     // 切换歌曲播放的音乐发生改变通知
     @objc func playMusicChange(myNotification: Notification){
+        print("收到消息")
         let userinfo = myNotification.userInfo
         if let info = userinfo {
             let value = info["song"]
@@ -208,16 +205,30 @@ class MusicPlayerControlle : WKInterfaceController,WKCrownDelegate{
             if value != nil {
                 let state : String = value as! String
                 switch state {
-                case "play":
+                case "empty": // 没有歌曲
+                    playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
+                    songnameLabel.setText("暂无音乐")
+                    singerLabel.setText("请在iPhone上添加音乐")
+                    coverImage.setImageNamed("music")
+                case "play":  // 正在播放
                     print("play")
                     playButton.setBackgroundImage(UIImage.init(systemName: "pause.circle"))
-                case "pause":
+                case "pause": // 暂停
                     print("pause")
                     playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
-                case "stop":
+                case "stop": //停止
                     print("stop")
                     playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
-                default:
+                case "error": //错误
+                    print("error")
+                    playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
+                    if let message = info["message"] {
+                        singerLabel.setText(message as? String)
+                    }
+                case "prepare": //正在准备
+                    print("prepare")
+                    playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
+                default: //未知
                     print("unknown")
                     playButton.setBackgroundImage(UIImage.init(systemName: "play.circle"))
                 }

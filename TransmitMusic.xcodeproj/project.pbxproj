@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,53 @@
 		1F19648A2361AF9F00C52300 /* ItemAlbumRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1964892361AF9F00C52300 /* ItemAlbumRowController.swift */; };
 		1F19648C2361AFC600C52300 /* ItemSongRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19648B2361AFC600C52300 /* ItemSongRowController.swift */; };
 		1F19648F2361B02F00C52300 /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19648E2361B02F00C52300 /* AlbumController.swift */; };
-		1F1964912361B07400C52300 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1964902361B07400C52300 /* SongController.swift */; };
+		1F1964912361B07400C52300 /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1964902361B07400C52300 /* PlaylistController.swift */; };
+		1F19650423628E1200C52300 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F19650323628E1200C52300 /* Kingfisher */; };
+		1F196509236292BA00C52300 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F196508236292BA00C52300 /* Kingfisher */; };
+		1F196517236295F300C52300 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F19650E236295F200C52300 /* FMDatabaseQueue.m */; };
+		1F196518236295F300C52300 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F196511236295F300C52300 /* FMDatabaseAdditions.m */; };
+		1F196519236295F300C52300 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F196512236295F300C52300 /* FMResultSet.m */; };
+		1F19651A236295F300C52300 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F196513236295F300C52300 /* FMDatabasePool.m */; };
+		1F19651B236295F300C52300 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F196514236295F300C52300 /* FMDatabase.m */; };
+		1F19651D2362968300C52300 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F19651C2362968300C52300 /* libsqlite3.0.tbd */; };
+		1F19651F236296AA00C52300 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19651E236296AA00C52300 /* SQLiteManager.swift */; };
+		1F1965212362989D00C52300 /* SQLiteBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1965202362989D00C52300 /* SQLiteBusiness.swift */; };
+		1F1965232362B06D00C52300 /* AlbumSongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1965222362B06D00C52300 /* AlbumSongController.swift */; };
+		1F1965252362B0C600C52300 /* ItemAlbumSongRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1965242362B0C600C52300 /* ItemAlbumSongRowController.swift */; };
+		1F1965272363383700C52300 /* WatchAlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1965262363383700C52300 /* WatchAlbumController.swift */; };
+		1F19652823633B9300C52300 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19648323618B0600C52300 /* Song.swift */; };
+		1F19652923633B9300C52300 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1964862361AB5D00C52300 /* Album.swift */; };
+		1F3676B72365B0D4004C94E7 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676872365B0D4004C94E7 /* UIScrollView+MJRefresh.m */; };
+		1F3676B82365B0D4004C94E7 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676882365B0D4004C94E7 /* MJRefreshConst.m */; };
+		1F3676B92365B0D4004C94E7 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676892365B0D4004C94E7 /* MJRefreshConfig.m */; };
+		1F3676BA2365B0D4004C94E7 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F36768D2365B0D4004C94E7 /* MJRefresh.bundle */; };
+		1F3676BB2365B0D4004C94E7 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36768F2365B0D4004C94E7 /* UIScrollView+MJExtension.m */; };
+		1F3676BC2365B0D4004C94E7 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676932365B0D4004C94E7 /* NSBundle+MJRefresh.m */; };
+		1F3676BD2365B0D4004C94E7 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676942365B0D4004C94E7 /* UIView+MJExtension.m */; };
+		1F3676BE2365B0D4004C94E7 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36769B2365B0D4004C94E7 /* MJRefreshBackGifFooter.m */; };
+		1F3676BF2365B0D4004C94E7 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36769C2365B0D4004C94E7 /* MJRefreshBackStateFooter.m */; };
+		1F3676C02365B0D4004C94E7 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36769D2365B0D4004C94E7 /* MJRefreshBackNormalFooter.m */; };
+		1F3676C12365B0D4004C94E7 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676A22365B0D4004C94E7 /* MJRefreshAutoStateFooter.m */; };
+		1F3676C22365B0D4004C94E7 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676A32365B0D4004C94E7 /* MJRefreshAutoGifFooter.m */; };
+		1F3676C32365B0D4004C94E7 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676A42365B0D4004C94E7 /* MJRefreshAutoNormalFooter.m */; };
+		1F3676C42365B0D4004C94E7 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676A62365B0D4004C94E7 /* MJRefreshNormalHeader.m */; };
+		1F3676C52365B0D4004C94E7 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676AA2365B0D4004C94E7 /* MJRefreshStateHeader.m */; };
+		1F3676C62365B0D4004C94E7 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676AB2365B0D4004C94E7 /* MJRefreshGifHeader.m */; };
+		1F3676C72365B0D4004C94E7 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676AD2365B0D4004C94E7 /* MJRefreshFooter.m */; };
+		1F3676C82365B0D4004C94E7 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676AF2365B0D4004C94E7 /* MJRefreshHeader.m */; };
+		1F3676C92365B0D4004C94E7 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676B12365B0D4004C94E7 /* MJRefreshBackFooter.m */; };
+		1F3676CA2365B0D4004C94E7 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676B22365B0D4004C94E7 /* MJRefreshAutoFooter.m */; };
+		1F3676CB2365B0D4004C94E7 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676B42365B0D4004C94E7 /* MJRefreshComponent.m */; };
+		1F3676CE2365CD7B004C94E7 /* AddAlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676CD2365CD7B004C94E7 /* AddAlbumController.swift */; };
+		1F3676D02365D0A1004C94E7 /* SelectImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676CF2365D0A1004C94E7 /* SelectImageController.swift */; };
+		1F3676D22365D189004C94E7 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3676D12365D189004C94E7 /* ImageCollectionCell.swift */; };
+		1F42F7FB236479E000D91E56 /* LocalSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F7FA236479E000D91E56 /* LocalSongCell.swift */; };
+		1F42F7FE2364854C00D91E56 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F7FD2364854C00D91E56 /* RoundImageView.swift */; };
+		1F42F80023649DA000D91E56 /* UploadToWatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F7FF23649DA000D91E56 /* UploadToWatchController.swift */; };
+		1F42F8032364B2C400D91E56 /* Md5Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F8022364B2C400D91E56 /* Md5Utils.swift */; };
 		1F652430235F3774000EE0FA /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65242F235F3774000EE0FA /* SettingController.swift */; };
-		1F84EA3B235C5D5200371518 /* SyncMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84EA3A235C5D5200371518 /* SyncMusicController.swift */; };
+		1FA6EDA6236355FE00B4C12F /* WatchSongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EDA5236355FE00B4C12F /* WatchSongController.swift */; };
+		1FA6EDA823635C3900B4C12F /* LocalSongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EDA723635C3900B4C12F /* LocalSongController.swift */; };
 		1FAF8716236085E300A2EDD1 /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAF8715236085E300A2EDD1 /* UserDefaultUtils.swift */; };
 		1FF55C65235B0FF90095CB66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C64235B0FF90095CB66 /* AppDelegate.swift */; };
 		1FF55C67235B0FF90095CB66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C66235B0FF90095CB66 /* SceneDelegate.swift */; };
@@ -31,11 +75,8 @@
 		1FF55C85235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FF55C8C235B0FFA0095CB66 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */; };
 		1FF55C8E235B0FFA0095CB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */; };
-		1FF55CA3235B10CF0095CB66 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */; };
 		1FF55CA4235B10CF0095CB66 /* LocalMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */; };
-		1FF55CA5235B10CF0095CB66 /* LocalMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */; };
 		1FF55CA6235B10CF0095CB66 /* ItemMusicRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */; };
-		1FF55CA8235C32FA0095CB66 /* DocumentMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +129,79 @@
 		1F1964892361AF9F00C52300 /* ItemAlbumRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAlbumRowController.swift; sourceTree = "<group>"; };
 		1F19648B2361AFC600C52300 /* ItemSongRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSongRowController.swift; sourceTree = "<group>"; };
 		1F19648E2361B02F00C52300 /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
-		1F1964902361B07400C52300 /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
+		1F1964902361B07400C52300 /* PlaylistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
+		1F19650B236295F200C52300 /* TransmitMusic WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TransmitMusic WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F19650C236295F200C52300 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		1F19650D236295F200C52300 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		1F19650E236295F200C52300 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		1F19650F236295F200C52300 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		1F196510236295F200C52300 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		1F196511236295F300C52300 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		1F196512236295F300C52300 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		1F196513236295F300C52300 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		1F196514236295F300C52300 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		1F196515236295F300C52300 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1F196516236295F300C52300 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		1F19651C2362968300C52300 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		1F19651E236296AA00C52300 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		1F1965202362989D00C52300 /* SQLiteBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteBusiness.swift; sourceTree = "<group>"; };
+		1F1965222362B06D00C52300 /* AlbumSongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSongController.swift; sourceTree = "<group>"; };
+		1F1965242362B0C600C52300 /* ItemAlbumSongRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAlbumSongRowController.swift; sourceTree = "<group>"; };
+		1F1965262363383700C52300 /* WatchAlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAlbumController.swift; sourceTree = "<group>"; };
+		1F3676872365B0D4004C94E7 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		1F3676882365B0D4004C94E7 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		1F3676892365B0D4004C94E7 /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
+		1F36768A2365B0D4004C94E7 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		1F36768B2365B0D4004C94E7 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		1F36768C2365B0D4004C94E7 /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
+		1F36768D2365B0D4004C94E7 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		1F36768E2365B0D4004C94E7 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		1F36768F2365B0D4004C94E7 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		1F3676902365B0D4004C94E7 /* MJRefreshConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConfig.h; sourceTree = "<group>"; };
+		1F3676912365B0D4004C94E7 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		1F3676922365B0D4004C94E7 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		1F3676932365B0D4004C94E7 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
+		1F3676942365B0D4004C94E7 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		1F3676982365B0D4004C94E7 /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		1F3676992365B0D4004C94E7 /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
+		1F36769A2365B0D4004C94E7 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		1F36769B2365B0D4004C94E7 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		1F36769C2365B0D4004C94E7 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		1F36769D2365B0D4004C94E7 /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		1F36769F2365B0D4004C94E7 /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		1F3676A02365B0D4004C94E7 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		1F3676A12365B0D4004C94E7 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		1F3676A22365B0D4004C94E7 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
+		1F3676A32365B0D4004C94E7 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		1F3676A42365B0D4004C94E7 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		1F3676A62365B0D4004C94E7 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		1F3676A72365B0D4004C94E7 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		1F3676A82365B0D4004C94E7 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshGifHeader.h; sourceTree = "<group>"; };
+		1F3676A92365B0D4004C94E7 /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		1F3676AA2365B0D4004C94E7 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
+		1F3676AB2365B0D4004C94E7 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshGifHeader.m; sourceTree = "<group>"; };
+		1F3676AD2365B0D4004C94E7 /* MJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooter.m; sourceTree = "<group>"; };
+		1F3676AE2365B0D4004C94E7 /* MJRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
+		1F3676AF2365B0D4004C94E7 /* MJRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
+		1F3676B02365B0D4004C94E7 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
+		1F3676B12365B0D4004C94E7 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackFooter.m; sourceTree = "<group>"; };
+		1F3676B22365B0D4004C94E7 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		1F3676B32365B0D4004C94E7 /* MJRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
+		1F3676B42365B0D4004C94E7 /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
+		1F3676B52365B0D4004C94E7 /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
+		1F3676B62365B0D4004C94E7 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		1F3676CC2365B12B004C94E7 /* bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridge-header.h"; sourceTree = "<group>"; };
+		1F3676CD2365CD7B004C94E7 /* AddAlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumController.swift; sourceTree = "<group>"; };
+		1F3676CF2365D0A1004C94E7 /* SelectImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageController.swift; sourceTree = "<group>"; };
+		1F3676D12365D189004C94E7 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		1F42F7FA236479E000D91E56 /* LocalSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongCell.swift; sourceTree = "<group>"; };
+		1F42F7FD2364854C00D91E56 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		1F42F7FF23649DA000D91E56 /* UploadToWatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadToWatchController.swift; sourceTree = "<group>"; };
+		1F42F8022364B2C400D91E56 /* Md5Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Md5Utils.swift; sourceTree = "<group>"; };
 		1F65242F235F3774000EE0FA /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
-		1F84EA3A235C5D5200371518 /* SyncMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMusicController.swift; sourceTree = "<group>"; };
+		1F7340D72366F01400BD2287 /* TransmitMusicDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TransmitMusicDebug.entitlements; sourceTree = "<group>"; };
+		1FA6EDA5236355FE00B4C12F /* WatchSongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSongController.swift; sourceTree = "<group>"; };
+		1FA6EDA723635C3900B4C12F /* LocalSongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongController.swift; sourceTree = "<group>"; };
 		1FAF8714235FE25F00A2EDD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1FAF8715236085E300A2EDD1 /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		1FF55C61235B0FF80095CB66 /* TransmitMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransmitMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,11 +220,8 @@
 		1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF55C8F235B0FFA0095CB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "../../LocalMusic/LocalMusic WatchKit Extension/InterfaceController.swift"; sourceTree = "<group>"; };
 		1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMusicManager.swift; sourceTree = "<group>"; };
-		1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMusicController.swift; sourceTree = "<group>"; };
 		1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemMusicRowController.swift; sourceTree = "<group>"; };
-		1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentMusicController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19650423628E1200C52300 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +237,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19651D2362968300C52300 /* libsqlite3.0.tbd in Frameworks */,
+				1F196509236292BA00C52300 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +260,7 @@
 				1FF55CA1235B10CF0095CB66 /* ItemMusicRowController.swift */,
 				1F1964892361AF9F00C52300 /* ItemAlbumRowController.swift */,
 				1F19648B2361AFC600C52300 /* ItemSongRowController.swift */,
+				1F1965242362B0C600C52300 /* ItemAlbumSongRowController.swift */,
 			);
 			path = item;
 			sourceTree = "<group>";
@@ -156,10 +268,178 @@
 		1F19648D2361B01E00C52300 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F05200A235EFF8E00A16F0B /* FileTransferController.swift */,
 				1F19648E2361B02F00C52300 /* AlbumController.swift */,
-				1F1964902361B07400C52300 /* SongController.swift */,
+				1F1964902361B07400C52300 /* PlaylistController.swift */,
+				1F65242F235F3774000EE0FA /* SettingController.swift */,
+				1F1964812361506D00C52300 /* MusicPlayerController.swift */,
+				1F1965222362B06D00C52300 /* AlbumSongController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		1F196507236292BA00C52300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F19651C2362968300C52300 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F3676362365AFAF004C94E7 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				1F36767D2365AFE1004C94E7 /* FMDB */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		1F36767D2365AFE1004C94E7 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				1F19650F236295F200C52300 /* FMDatabase.h */,
+				1F196514236295F300C52300 /* FMDatabase.m */,
+				1F19650C236295F200C52300 /* FMDatabaseAdditions.h */,
+				1F196511236295F300C52300 /* FMDatabaseAdditions.m */,
+				1F19650D236295F200C52300 /* FMDatabasePool.h */,
+				1F196513236295F300C52300 /* FMDatabasePool.m */,
+				1F196515236295F300C52300 /* FMDatabaseQueue.h */,
+				1F19650E236295F200C52300 /* FMDatabaseQueue.m */,
+				1F196510236295F200C52300 /* FMDB.h */,
+				1F196516236295F300C52300 /* FMResultSet.h */,
+				1F196512236295F300C52300 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		1F36767E2365B073004C94E7 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676862365B0D4004C94E7 /* MJRefresh */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		1F3676862365B0D4004C94E7 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676872365B0D4004C94E7 /* UIScrollView+MJRefresh.m */,
+				1F3676882365B0D4004C94E7 /* MJRefreshConst.m */,
+				1F3676892365B0D4004C94E7 /* MJRefreshConfig.m */,
+				1F36768A2365B0D4004C94E7 /* UIScrollView+MJExtension.h */,
+				1F36768B2365B0D4004C94E7 /* MJRefresh.h */,
+				1F36768C2365B0D4004C94E7 /* NSBundle+MJRefresh.h */,
+				1F36768D2365B0D4004C94E7 /* MJRefresh.bundle */,
+				1F36768E2365B0D4004C94E7 /* UIView+MJExtension.h */,
+				1F36768F2365B0D4004C94E7 /* UIScrollView+MJExtension.m */,
+				1F3676902365B0D4004C94E7 /* MJRefreshConfig.h */,
+				1F3676912365B0D4004C94E7 /* MJRefreshConst.h */,
+				1F3676922365B0D4004C94E7 /* UIScrollView+MJRefresh.h */,
+				1F3676932365B0D4004C94E7 /* NSBundle+MJRefresh.m */,
+				1F3676942365B0D4004C94E7 /* UIView+MJExtension.m */,
+				1F3676952365B0D4004C94E7 /* Custom */,
+				1F3676AC2365B0D4004C94E7 /* Base */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		1F3676952365B0D4004C94E7 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676962365B0D4004C94E7 /* Footer */,
+				1F3676A52365B0D4004C94E7 /* Header */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		1F3676962365B0D4004C94E7 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676972365B0D4004C94E7 /* Back */,
+				1F36769E2365B0D4004C94E7 /* Auto */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		1F3676972365B0D4004C94E7 /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676982365B0D4004C94E7 /* MJRefreshBackGifFooter.h */,
+				1F3676992365B0D4004C94E7 /* MJRefreshBackStateFooter.h */,
+				1F36769A2365B0D4004C94E7 /* MJRefreshBackNormalFooter.h */,
+				1F36769B2365B0D4004C94E7 /* MJRefreshBackGifFooter.m */,
+				1F36769C2365B0D4004C94E7 /* MJRefreshBackStateFooter.m */,
+				1F36769D2365B0D4004C94E7 /* MJRefreshBackNormalFooter.m */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		1F36769E2365B0D4004C94E7 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				1F36769F2365B0D4004C94E7 /* MJRefreshAutoStateFooter.h */,
+				1F3676A02365B0D4004C94E7 /* MJRefreshAutoNormalFooter.h */,
+				1F3676A12365B0D4004C94E7 /* MJRefreshAutoGifFooter.h */,
+				1F3676A22365B0D4004C94E7 /* MJRefreshAutoStateFooter.m */,
+				1F3676A32365B0D4004C94E7 /* MJRefreshAutoGifFooter.m */,
+				1F3676A42365B0D4004C94E7 /* MJRefreshAutoNormalFooter.m */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		1F3676A52365B0D4004C94E7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676A62365B0D4004C94E7 /* MJRefreshNormalHeader.m */,
+				1F3676A72365B0D4004C94E7 /* MJRefreshStateHeader.h */,
+				1F3676A82365B0D4004C94E7 /* MJRefreshGifHeader.h */,
+				1F3676A92365B0D4004C94E7 /* MJRefreshNormalHeader.h */,
+				1F3676AA2365B0D4004C94E7 /* MJRefreshStateHeader.m */,
+				1F3676AB2365B0D4004C94E7 /* MJRefreshGifHeader.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		1F3676AC2365B0D4004C94E7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1F3676AD2365B0D4004C94E7 /* MJRefreshFooter.m */,
+				1F3676AE2365B0D4004C94E7 /* MJRefreshComponent.h */,
+				1F3676AF2365B0D4004C94E7 /* MJRefreshHeader.m */,
+				1F3676B02365B0D4004C94E7 /* MJRefreshAutoFooter.h */,
+				1F3676B12365B0D4004C94E7 /* MJRefreshBackFooter.m */,
+				1F3676B22365B0D4004C94E7 /* MJRefreshAutoFooter.m */,
+				1F3676B32365B0D4004C94E7 /* MJRefreshHeader.h */,
+				1F3676B42365B0D4004C94E7 /* MJRefreshComponent.m */,
+				1F3676B52365B0D4004C94E7 /* MJRefreshFooter.h */,
+				1F3676B62365B0D4004C94E7 /* MJRefreshBackFooter.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1F42F7F9236479D000D91E56 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1F42F7FA236479E000D91E56 /* LocalSongCell.swift */,
+				1F3676D12365D189004C94E7 /* ImageCollectionCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		1F42F7FC2364853E00D91E56 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1F42F7FD2364854C00D91E56 /* RoundImageView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1F42F8012364B2B400D91E56 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F42F8022364B2C400D91E56 /* Md5Utils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		1FF55C58235B0FF80095CB66 = {
@@ -170,6 +450,7 @@
 				1FF55C79235B0FF90095CB66 /* TransmitMusic WatchKit App */,
 				1FF55C88235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */,
 				1FF55C62235B0FF80095CB66 /* Products */,
+				1F196507236292BA00C52300 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +467,11 @@
 		1FF55C63235B0FF80095CB66 /* TransmitMusic */ = {
 			isa = PBXGroup;
 			children = (
+				1F7340D72366F01400BD2287 /* TransmitMusicDebug.entitlements */,
+				1F36767E2365B073004C94E7 /* ThirdParty */,
+				1F42F8012364B2B400D91E56 /* utils */,
+				1F42F7FC2364853E00D91E56 /* view */,
+				1F42F7F9236479D000D91E56 /* cell */,
 				1FF55C64235B0FF90095CB66 /* AppDelegate.swift */,
 				1FF55C66235B0FF90095CB66 /* SceneDelegate.swift */,
 				1FF55C68235B0FF90095CB66 /* ViewController.swift */,
@@ -193,8 +479,13 @@
 				1FF55C6D235B0FF90095CB66 /* Assets.xcassets */,
 				1FF55C6F235B0FF90095CB66 /* LaunchScreen.storyboard */,
 				1FF55C72235B0FF90095CB66 /* Info.plist */,
-				1FF55CA7235C32FA0095CB66 /* DocumentMusicController.swift */,
-				1F84EA3A235C5D5200371518 /* SyncMusicController.swift */,
+				1F1965262363383700C52300 /* WatchAlbumController.swift */,
+				1FA6EDA5236355FE00B4C12F /* WatchSongController.swift */,
+				1FA6EDA723635C3900B4C12F /* LocalSongController.swift */,
+				1F42F7FF23649DA000D91E56 /* UploadToWatchController.swift */,
+				1F3676CC2365B12B004C94E7 /* bridge-header.h */,
+				1F3676CD2365CD7B004C94E7 /* AddAlbumController.swift */,
+				1F3676CF2365D0A1004C94E7 /* SelectImageController.swift */,
 			);
 			path = TransmitMusic;
 			sourceTree = "<group>";
@@ -212,19 +503,18 @@
 		1FF55C88235B0FFA0095CB66 /* TransmitMusic WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1F3676362365AFAF004C94E7 /* ThirdParty */,
+				1F19650B236295F200C52300 /* TransmitMusic WatchKit Extension-Bridging-Header.h */,
 				1F19648D2361B01E00C52300 /* controller */,
 				1F1964882361AF8200C52300 /* item */,
 				1F1964852361AB4700C52300 /* model */,
-				1FF55C9E235B10CF0095CB66 /* InterfaceController.swift */,
-				1FF55CA0235B10CF0095CB66 /* LocalMusicController.swift */,
 				1FF55C9F235B10CF0095CB66 /* LocalMusicManager.swift */,
 				1FF55C8B235B0FFA0095CB66 /* ExtensionDelegate.swift */,
 				1FF55C8D235B0FFA0095CB66 /* Assets.xcassets */,
 				1FF55C8F235B0FFA0095CB66 /* Info.plist */,
-				1F05200A235EFF8E00A16F0B /* FileTransferController.swift */,
-				1F65242F235F3774000EE0FA /* SettingController.swift */,
 				1FAF8715236085E300A2EDD1 /* UserDefaultUtils.swift */,
-				1F1964812361506D00C52300 /* MusicPlayerController.swift */,
+				1F19651E236296AA00C52300 /* SQLiteManager.swift */,
+				1F1965202362989D00C52300 /* SQLiteBusiness.swift */,
 			);
 			path = "TransmitMusic WatchKit Extension";
 			sourceTree = "<group>";
@@ -247,6 +537,9 @@
 				1FF55C78235B0FF90095CB66 /* PBXTargetDependency */,
 			);
 			name = TransmitMusic;
+			packageProductDependencies = (
+				1F19650323628E1200C52300 /* Kingfisher */,
+			);
 			productName = TransmitMusic;
 			productReference = 1FF55C61235B0FF80095CB66 /* TransmitMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +574,9 @@
 			dependencies = (
 			);
 			name = "TransmitMusic WatchKit Extension";
+			packageProductDependencies = (
+				1F196508236292BA00C52300 /* Kingfisher */,
+			);
 			productName = "TransmitMusic WatchKit Extension";
 			productReference = 1FF55C84235B0FFA0095CB66 /* TransmitMusic WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -303,6 +599,7 @@
 					};
 					1FF55C83235B0FFA0095CB66 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -315,6 +612,9 @@
 				Base,
 			);
 			mainGroup = 1FF55C58235B0FF80095CB66;
+			packageReferences = (
+				1F19650223628E1200C52300 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 1FF55C62235B0FF80095CB66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,6 +633,7 @@
 			files = (
 				1FF55C71235B0FF90095CB66 /* LaunchScreen.storyboard in Resources */,
 				1FF55C6E235B0FF90095CB66 /* Assets.xcassets in Resources */,
+				1F3676BA2365B0D4004C94E7 /* MJRefresh.bundle in Resources */,
 				1FF55C6C235B0FF90095CB66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,11 +663,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F84EA3B235C5D5200371518 /* SyncMusicController.swift in Sources */,
-				1FF55CA8235C32FA0095CB66 /* DocumentMusicController.swift in Sources */,
+				1F19652823633B9300C52300 /* Song.swift in Sources */,
+				1F19652923633B9300C52300 /* Album.swift in Sources */,
+				1FA6EDA823635C3900B4C12F /* LocalSongController.swift in Sources */,
+				1F42F8032364B2C400D91E56 /* Md5Utils.swift in Sources */,
+				1F42F7FB236479E000D91E56 /* LocalSongCell.swift in Sources */,
+				1F3676C32365B0D4004C94E7 /* MJRefreshAutoNormalFooter.m in Sources */,
+				1F3676C82365B0D4004C94E7 /* MJRefreshHeader.m in Sources */,
+				1F3676C42365B0D4004C94E7 /* MJRefreshNormalHeader.m in Sources */,
+				1F3676CB2365B0D4004C94E7 /* MJRefreshComponent.m in Sources */,
+				1F3676B92365B0D4004C94E7 /* MJRefreshConfig.m in Sources */,
+				1F3676BC2365B0D4004C94E7 /* NSBundle+MJRefresh.m in Sources */,
+				1F42F7FE2364854C00D91E56 /* RoundImageView.swift in Sources */,
+				1F1965272363383700C52300 /* WatchAlbumController.swift in Sources */,
+				1F42F80023649DA000D91E56 /* UploadToWatchController.swift in Sources */,
+				1F3676B72365B0D4004C94E7 /* UIScrollView+MJRefresh.m in Sources */,
+				1F3676C72365B0D4004C94E7 /* MJRefreshFooter.m in Sources */,
+				1F3676BE2365B0D4004C94E7 /* MJRefreshBackGifFooter.m in Sources */,
+				1F3676C22365B0D4004C94E7 /* MJRefreshAutoGifFooter.m in Sources */,
 				1FF55C69235B0FF90095CB66 /* ViewController.swift in Sources */,
+				1F3676D02365D0A1004C94E7 /* SelectImageController.swift in Sources */,
+				1F3676CE2365CD7B004C94E7 /* AddAlbumController.swift in Sources */,
+				1F3676C92365B0D4004C94E7 /* MJRefreshBackFooter.m in Sources */,
+				1F3676B82365B0D4004C94E7 /* MJRefreshConst.m in Sources */,
+				1F3676C52365B0D4004C94E7 /* MJRefreshStateHeader.m in Sources */,
+				1F3676BD2365B0D4004C94E7 /* UIView+MJExtension.m in Sources */,
+				1F3676C02365B0D4004C94E7 /* MJRefreshBackNormalFooter.m in Sources */,
+				1F3676BB2365B0D4004C94E7 /* UIScrollView+MJExtension.m in Sources */,
+				1F3676BF2365B0D4004C94E7 /* MJRefreshBackStateFooter.m in Sources */,
+				1F3676D22365D189004C94E7 /* ImageCollectionCell.swift in Sources */,
+				1F3676C12365B0D4004C94E7 /* MJRefreshAutoStateFooter.m in Sources */,
 				1FF55C65235B0FF90095CB66 /* AppDelegate.swift in Sources */,
+				1F3676C62365B0D4004C94E7 /* MJRefreshGifHeader.m in Sources */,
+				1F3676CA2365B0D4004C94E7 /* MJRefreshAutoFooter.m in Sources */,
 				1FF55C67235B0FF90095CB66 /* SceneDelegate.swift in Sources */,
+				1FA6EDA6236355FE00B4C12F /* WatchSongController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,19 +705,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1964912361B07400C52300 /* SongController.swift in Sources */,
+				1F1965212362989D00C52300 /* SQLiteBusiness.swift in Sources */,
+				1F1964912361B07400C52300 /* PlaylistController.swift in Sources */,
+				1F19651B236295F300C52300 /* FMDatabase.m in Sources */,
 				1F19648C2361AFC600C52300 /* ItemSongRowController.swift in Sources */,
 				1FF55CA4235B10CF0095CB66 /* LocalMusicManager.swift in Sources */,
-				1FF55CA5235B10CF0095CB66 /* LocalMusicController.swift in Sources */,
 				1FF55C8C235B0FFA0095CB66 /* ExtensionDelegate.swift in Sources */,
-				1FF55CA3235B10CF0095CB66 /* InterfaceController.swift in Sources */,
+				1F1965232362B06D00C52300 /* AlbumSongController.swift in Sources */,
+				1F196517236295F300C52300 /* FMDatabaseQueue.m in Sources */,
+				1F19651F236296AA00C52300 /* SQLiteManager.swift in Sources */,
 				1F19648423618B0600C52300 /* Song.swift in Sources */,
+				1F196518236295F300C52300 /* FMDatabaseAdditions.m in Sources */,
 				1F05200B235EFF8E00A16F0B /* FileTransferController.swift in Sources */,
 				1FF55CA6235B10CF0095CB66 /* ItemMusicRowController.swift in Sources */,
 				1FAF8716236085E300A2EDD1 /* UserDefaultUtils.swift in Sources */,
 				1F1964872361AB5D00C52300 /* Album.swift in Sources */,
 				1F652430235F3774000EE0FA /* SettingController.swift in Sources */,
+				1F19651A236295F300C52300 /* FMDatabasePool.m in Sources */,
+				1F196519236295F300C52300 /* FMResultSet.m in Sources */,
 				1F19648F2361B02F00C52300 /* AlbumController.swift in Sources */,
+				1F1965252362B0C600C52300 /* ItemAlbumSongRowController.swift in Sources */,
 				1F1964822361506D00C52300 /* MusicPlayerController.swift in Sources */,
 				1F19648A2361AF9F00C52300 /* ItemAlbumRowController.swift in Sources */,
 			);
@@ -553,6 +891,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RGGRP2GD4;
@@ -567,6 +906,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransmitMusic WatchKit Extension/TransmitMusic WatchKit Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -577,6 +918,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6GM4475WAQ;
@@ -591,6 +933,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransmitMusic WatchKit Extension/TransmitMusic WatchKit Extension-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -643,6 +986,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TransmitMusic/TransmitMusicDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RGGRP2GD4;
@@ -654,6 +998,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic;
 				PRODUCT_NAME = TransmitMusic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransmitMusic/bridge-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -674,6 +1019,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bandou.app.TransmitMusic;
 				PRODUCT_NAME = TransmitMusic;
 				PROVISIONING_PROFILE_SPECIFIER = bandou_dev;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransmitMusic/bridge-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -719,6 +1065,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F19650223628E1200C52300 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F19650323628E1200C52300 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F19650223628E1200C52300 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		1F196508236292BA00C52300 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F19650223628E1200C52300 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FF55C59235B0FF80095CB66 /* Project object */;
 }

@@ -1,191 +1,405 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="603-v9-X5M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ESQ-ne-sIs">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--首页-->
-        <scene sceneID="hA3-q2-fNt">
+        <!--添加专辑-->
+        <scene sceneID="84a-uo-mMe">
             <objects>
-                <tableViewController id="FEg-2r-hAf" customClass="ViewController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ext-Dd-0gF">
+                <viewController id="8TP-Mk-pUx" customClass="AddAlbumController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9e-sj-F5A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="IEK-it-CwN" style="IBUITableViewCellStyleDefault" id="lwg-Vv-H91">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lwg-Vv-H91" id="LHc-zL-ZQU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IEK-it-CwN">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FEg-2r-hAf" id="zvE-XI-HzS"/>
-                            <outlet property="delegate" destination="FEg-2r-hAf" id="Nkn-5J-9um"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="首页" id="gaK-xa-Mpj">
-                        <barButtonItem key="leftBarButtonItem" title="刷新" id="GwM-K7-uhT">
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_image" translatesAutoresizingMaskIntoConstraints="NO" id="OJF-Nj-BfQ">
+                                <rect key="frame" x="132" y="168" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3Kb-jH-DQ4" appends="YES" id="2SK-FI-Ba1"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入专辑名称" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-eF-HOC">
+                                <rect key="frame" x="118" y="353" width="244" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-R1-iXZ">
+                                <rect key="frame" x="52" y="358" width="62" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入简单描述" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="koa-sB-9Qs">
+                                <rect key="frame" x="118" y="418" width="244" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="描述：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAK-S9-2ib">
+                                <rect key="frame" x="52" y="423" width="62" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hmd-Id-DWc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加专辑" id="AQr-cL-cRI">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="3gm-kV-aOU">
                             <connections>
-                                <action selector="refreshSession:" destination="FEg-2r-hAf" id="Sng-Do-Lqh"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="本地歌曲" id="G3t-6M-VhV">
-                            <connections>
-                                <segue destination="7W5-rT-qrl" kind="show" id="mTC-XB-XXU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f5l-AW-ffd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="607" y="-7"/>
-        </scene>
-        <!--本地歌曲-->
-        <scene sceneID="trL-gX-7lO">
-            <objects>
-                <tableViewController id="7W5-rT-qrl" customClass="DocumentMusicController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jfD-CS-QEp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="musicCell" id="gqT-yE-s5c">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gqT-yE-s5c" id="ORe-Zo-CZ6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-33-S5g">
-                                            <rect key="frame" x="9" y="7" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="15"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你是我今生是美的温柔-DJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhQ-34-g3z">
-                                            <rect key="frame" x="47" y="7" width="352" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7W5-rT-qrl" id="V6U-sY-ghB"/>
-                            <outlet property="delegate" destination="7W5-rT-qrl" id="2wF-3T-8YM"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="本地歌曲" id="j7c-JA-vlD">
-                        <barButtonItem key="rightBarButtonItem" title="同步" id="ko1-qD-MWv">
-                            <connections>
-                                <action selector="syncSong:" destination="7W5-rT-qrl" id="IrL-gZ-ebY"/>
+                                <action selector="addAlbum:" destination="8TP-Mk-pUx" id="K2g-Av-gSz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="4xf-LX-IEh" kind="show" identifier="ToSyncSegue" id="9iy-tu-fGb"/>
+                        <outlet property="albumImage" destination="OJF-Nj-BfQ" id="rsI-0b-Zmp"/>
+                        <outlet property="artistField" destination="koa-sB-9Qs" id="t6t-dD-WNU"/>
+                        <outlet property="nameField" destination="BhO-eF-HOC" id="IZK-CP-rGE"/>
+                        <segue destination="Tl6-0i-4Hl" kind="show" identifier="ToSelectImageSeque" id="baj-5h-FKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovx-NQ-Bfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3Kb-jH-DQ4">
+                    <connections>
+                        <action selector="toSelectImage:" destination="8TP-Mk-pUx" id="DQk-EJ-bf0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="486.95652173913049" y="-1460.054347826087"/>
+        </scene>
+        <!--选择图片-->
+        <scene sceneID="ARZ-pS-iN7">
+            <objects>
+                <collectionViewController id="Tl6-0i-4Hl" customClass="SelectImageController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="rV4-gH-oQl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ksd-Pk-jau">
+                            <size key="itemSize" width="400" height="386"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ImageCell" id="TeZ-dN-Nm1" customClass="ImageCollectionCell" customModule="TransmitMusic" customModuleProvider="target">
+                                <rect key="frame" x="10" y="0.0" width="394" height="400"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qqd-yZ-xIf">
+                                    <rect key="frame" x="0.0" y="0.0" width="394" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdN-lj-sdr">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="386"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rdN-lj-sdr" firstAttribute="centerY" secondItem="qqd-yZ-xIf" secondAttribute="centerY" id="CtM-Fd-0kx"/>
+                                        <constraint firstItem="rdN-lj-sdr" firstAttribute="width" secondItem="qqd-yZ-xIf" secondAttribute="width" id="HZX-Wu-Cjb"/>
+                                        <constraint firstItem="rdN-lj-sdr" firstAttribute="centerX" secondItem="qqd-yZ-xIf" secondAttribute="centerX" id="Xdq-SY-LIe"/>
+                                        <constraint firstItem="rdN-lj-sdr" firstAttribute="height" secondItem="qqd-yZ-xIf" secondAttribute="height" id="ZE4-je-tQ8"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="394" height="400"/>
+                                <connections>
+                                    <outlet property="coverImage" destination="rdN-lj-sdr" id="f4M-Cg-kCa"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Tl6-0i-4Hl" id="jB5-my-5Ry"/>
+                            <outlet property="delegate" destination="Tl6-0i-4Hl" id="HuP-5d-xef"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="选择图片" id="v2A-kr-bg9"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oq-bC-N7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414.4927536231885" y="-1468.2065217391305"/>
+        </scene>
+        <!--专辑列表-->
+        <scene sceneID="hPy-Gu-yqJ">
+            <objects>
+                <tableViewController id="wHY-we-ih1" customClass="WatchAlbumController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="StR-e7-SAl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WatchAlbumCell" textLabel="gYe-3V-TbV" detailTextLabel="dY9-GX-ZWI" imageView="FL6-wj-E4a" style="IBUITableViewCellStyleValue1" id="KX7-8G-DAk">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KX7-8G-DAk" id="BOT-Zz-wkF">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gYe-3V-TbV">
+                                            <rect key="frame" x="59" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="paperplane.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="FL6-wj-E4a">
+                                            <rect key="frame" x="21.5" y="12.000000000000002" width="21" height="19.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="dY9-GX-ZWI">
+                                            <rect key="frame" x="340" y="16" width="35" height="15.666666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nLw-DJ-rwM" kind="show" id="g8y-HB-xan"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wHY-we-ih1" id="2z5-De-e44"/>
+                            <outlet property="delegate" destination="wHY-we-ih1" id="25C-jX-bMG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="专辑列表" id="Nhn-9M-40f">
+                        <barButtonItem key="rightBarButtonItem" title="添加专辑" id="qoa-E3-ZX6">
+                            <connections>
+                                <segue destination="8TP-Mk-pUx" kind="show" id="IU2-XV-V1A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4X0-Gs-Zma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="-719"/>
+        </scene>
+        <!--歌曲列表-->
+        <scene sceneID="6ll-u6-8ZA">
+            <objects>
+                <tableViewController id="nLw-DJ-rwM" customClass="WatchSongController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rSz-OY-gcw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WatchSongCell" textLabel="byy-TS-LWD" detailTextLabel="TZp-bh-JS4" imageView="Ket-Mq-Mo9" style="IBUITableViewCellStyleValue1" id="hcn-hb-qMM">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcn-hb-qMM" id="dWL-Eg-pQQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="byy-TS-LWD">
+                                            <rect key="frame" x="59" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pencil.slash" catalog="system" id="Ket-Mq-Mo9">
+                                            <rect key="frame" x="23.166666666666668" y="14.333333333333332" width="17.666666666666664" height="15.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TZp-bh-JS4">
+                                            <rect key="frame" x="350" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nLw-DJ-rwM" id="YUz-1v-Rjl"/>
+                            <outlet property="delegate" destination="nLw-DJ-rwM" id="X5x-xA-6cS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="歌曲列表" id="nvZ-88-4Tf">
+                        <barButtonItem key="rightBarButtonItem" title="添加歌曲" id="KUa-GE-3Ev">
+                            <connections>
+                                <action selector="toLocalSong:" destination="nLw-DJ-rwM" id="MmF-1w-swH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="yJG-RS-T5t" kind="show" identifier="ToLocalSongSeque" id="e6l-Ai-UfD"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ub2-EF-MkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lOC-IA-10D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517.3913043478262" y="-15.489130434782609"/>
+            <point key="canvasLocation" x="1517" y="-719"/>
         </scene>
-        <!--同步歌曲-->
-        <scene sceneID="pcq-do-xkM">
+        <!--本地曲库-->
+        <scene sceneID="2RS-i3-QlV">
             <objects>
-                <viewController id="4xf-LX-IEh" customClass="SyncMusicController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Smj-bi-zVx">
+                <tableViewController title="本地曲库" id="yJG-RS-T5t" customClass="LocalSongController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Lf-kB-Dtq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LocalSongCell" id="vyN-lV-ciN" customClass="LocalSongCell" customModule="TransmitMusic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vyN-lV-ciN" id="w8q-qB-9TL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQp-uV-Brd">
+                                            <rect key="frame" x="8" y="7" width="28" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="song_discheck"/>
+                                            <state key="selected" image="song_checked"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="歌曲名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h16-We-Sq0">
+                                            <rect key="frame" x="44" y="11" width="365" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkButton" destination="JQp-uV-Brd" id="y8q-bc-npL"/>
+                                    <outlet property="songNameLabel" destination="h16-We-Sq0" id="de4-3M-w3I"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yJG-RS-T5t" id="hor-s1-2kN"/>
+                            <outlet property="delegate" destination="yJG-RS-T5t" id="HKw-iZ-Xdw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="本地曲库" id="ShA-6w-AFD">
+                        <barButtonItem key="rightBarButtonItem" title="上传至手表" id="vTw-gl-nzn">
+                            <connections>
+                                <action selector="uploadToWatch:" destination="yJG-RS-T5t" id="k7k-h8-zR7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="DFE-Sa-SAA" kind="show" identifier="UploadToWatch" id="kDl-F8-07a"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erL-nm-LLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602.898550724638" y="-719.02173913043487"/>
+        </scene>
+        <!--上传至手表-->
+        <scene sceneID="yCa-H5-HVX">
+            <objects>
+                <viewController id="DFE-Sa-SAA" customClass="UploadToWatchController" customModule="TransmitMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2q-mV-5cF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正在同步...（1/100）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ie-gT-7YZ">
-                                <rect key="frame" x="0.0" y="447" width="414" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KeY-dW-529" customClass="RoundImageView" customModule="TransmitMusic" customModuleProvider="target">
+                                <rect key="frame" x="127" y="159" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57547706620000005" blue="0.41908599159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOf-Kf-Qi4">
+                                <rect key="frame" x="8" y="473" width="397" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">温馨提示：
+当前版本尚未加入网络歌曲，仅对本地Document目录下的歌曲管理，所以上传至手表的歌曲海报和歌曲艺术家会自动创建，创建原则如下：
+1. 海报从内置的几张海报中随机分配一个，图片来原于“百度图片”；
+2. 歌曲艺术家根据“-”分隔后取后面的部分，如“四块五-隔壁老樊”会截取后面的“隔壁老樊”；</string>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正在同步...（1/100）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AB8-c4-wkS">
+                                <rect key="frame" x="0.0" y="357" width="414" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前歌曲：四块五-隔壁老樊.mp3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvk-bW-r7S">
-                                <rect key="frame" x="0.0" y="491" width="414" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前歌曲：四块五-隔壁老樊.mp3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9M-lD-FRJ">
+                                <rect key="frame" x="0.0" y="400" width="414" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading_1" translatesAutoresizingMaskIntoConstraints="NO" id="RXU-PP-SOv">
-                                <rect key="frame" x="127" y="234" width="160" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeJ-V2-G5D">
+                                <rect key="frame" x="161" y="334" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="重新开始上传"/>
+                                <connections>
+                                    <action selector="retryUpload:" destination="DFE-Sa-SAA" eventType="touchUpInside" id="Eiu-sQ-cM8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="错误信息" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-Lb-fEq">
+                                <rect key="frame" x="0.0" y="372" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0093617555427757404" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4kU-yF-xYo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ot7-Q0-7iY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="同步歌曲" id="tqO-bf-t3a"/>
+                    <navigationItem key="navigationItem" title="上传至手表" id="9Uy-s6-ccH"/>
                     <connections>
-                        <outlet property="counterLabel" destination="3ie-gT-7YZ" id="oyU-Oe-ueE"/>
-                        <outlet property="currentSongLabel" destination="fvk-bW-r7S" id="N8Z-jk-mxD"/>
-                        <outlet property="loadingImageView" destination="RXU-PP-SOv" id="Aib-co-gAs"/>
+                        <outlet property="currentLabel" destination="C9M-lD-FRJ" id="gE3-mg-3m4"/>
+                        <outlet property="errorLabel" destination="5sh-Lb-fEq" id="pVg-RD-dgw"/>
+                        <outlet property="retryButton" destination="qeJ-V2-G5D" id="Z6V-1v-7du"/>
+                        <outlet property="syncProgressLabel" destination="AB8-c4-wkS" id="qRd-OU-7iM"/>
+                        <outlet property="thumbnailImage" destination="KeY-dW-529" id="9N7-Xq-VZe"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rke-II-tO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Am-8e-da6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334.7826086956525" y="-15.489130434782609"/>
+            <point key="canvasLocation" x="3595.652173913044" y="-719.02173913043487"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="nkD-Ma-aRM">
+        <scene sceneID="sST-LK-ajc">
             <objects>
-                <navigationController id="603-v9-X5M" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2n4-ng-Z06">
+                <navigationController id="ESQ-ne-sIs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zP2-7D-GqW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JMe-Oe-Rv9">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="FEg-2r-hAf" kind="relationship" relationship="rootViewController" id="em7-A1-eU4"/>
+                        <segue destination="wHY-we-ih1" kind="relationship" relationship="rootViewController" id="Sdy-cS-rCS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LwM-6b-n0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5J-tY-YZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="-7"/>
+            <point key="canvasLocation" x="-431" y="-719"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Loading_1" width="40" height="40"/>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+        <image name="pencil.slash" catalog="system" width="64" height="56"/>
+        <image name="select_image" width="258.5" height="258"/>
+        <image name="song_checked" width="100" height="100"/>
+        <image name="song_discheck" width="100" height="100"/>
     </resources>
 </document>

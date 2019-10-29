@@ -8,6 +8,7 @@
 
 import Foundation
 import WatchKit
+import Kingfisher
 
 class AlbumController : WKInterfaceController{
     
@@ -18,24 +19,38 @@ class AlbumController : WKInterfaceController{
     
     override func awake(withContext context: Any?) {
         
-        albums.append(contentsOf: LocalMusicManager.shareInstance().getAlbums())
+        reloadTable()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAlbums), name: FileTransferController.ALBUM_UPDATE, object: nil)
+    }
+    
+    func reloadTable(){
+        albums.removeAll()
+        albums.append(LocalMusicManager.ALL_ALBUM)
+        albums.append(contentsOf: SQLiteBusiness.shareInstance().getAllAlbum())
+        
+        if albumTable.numberOfRows > 0 {
+            albumTable.removeRows(at: IndexSet.init(0...albumTable.numberOfRows))
+        }
         albumTable.setNumberOfRows(albums.count, withRowType: "ItemAlbumRowController")
         
         for(i,album) in albums.enumerated(){
             let cell = albumTable.rowController(at: i) as! ItemAlbumRowController
             cell.albumNameLabel.setText(album.albumName)
-            do{
-                try cell.albumImage.setImage(UIImage(data: Data(contentsOf: URL(string: album.albumThumbnail)!)))
-            }catch{
-                print(error)
-            }
+            let optionUrl = URL(string: album.albumThumbnail)
+            cell.albumImage.kf.setImage(with: optionUrl, placeholder: KFCrossPlatformImage(named: "album"), options: nil, progressBlock: nil, completionHandler: nil)
         }
+    }
+    
+    @objc func updateAlbums(myNotification: Notification){
+        reloadTable()
     }
     
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        LocalMusicManager.selectedAblum = albums[rowIndex]
-        pushController(withName: "SongController", context: nil)
+        AlbumSongController.selectedAlbum = albums[rowIndex]
+        pushController(withName: "AlbumSongController", context: nil)
     }
+    
     
 }

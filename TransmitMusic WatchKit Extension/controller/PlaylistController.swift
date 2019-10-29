@@ -8,35 +8,27 @@
 
 import Foundation
 import WatchKit
+import Kingfisher
 
-class SongController : WKInterfaceController{
+class PlaylistController : WKInterfaceController{
     @IBOutlet weak var songTable: WKInterfaceTable!
     
     var songList:[Song] = []
     
     override func awake(withContext context: Any?) {
-        if let ablum = LocalMusicManager.selectedAblum{
-            setTitle("专辑：\(ablum.albumName)")
-            songList.append(contentsOf: LocalMusicManager.shareInstance().getSongsByAlbumId(ablum.albumId))
-        }
-        else{
-            setTitle("音乐列表")
-        }
+        songList.append(contentsOf: LocalMusicManager.shareInstance().currentPlayList)
         
         songTable.setNumberOfRows(songList.count, withRowType: "ItemSongRowController")
         for(i,song) in songList.enumerated(){
             let cell = songTable.rowController(at: i) as! ItemSongRowController
             cell.songNameLabel.setText(song.songName)
-            do{
-                try cell.songImage.setImage(UIImage(data: Data(contentsOf: URL(string: song.thumbnail)!)))
-            }catch{
-                print(error)
-                cell.songImage.setImage(UIImage(named: "music_thumbnail"))
-            }
+            let optionUrl = URL(string: song.thumbnail)
+            cell.songImage.kf.setImage(with: optionUrl, placeholder: KFCrossPlatformImage(named: "music"), options: nil, progressBlock: nil, completionHandler: nil)
         }
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        
+        LocalMusicManager.shareInstance().playCurrentAlbum(rowIndex)
+        popToRootController()
     }
 }

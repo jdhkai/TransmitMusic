@@ -44,6 +44,33 @@ class UserDefaultUtils : NSObject{
         }
         return 50.0
     }
+    // 获取上一次播放的专辑ID
+    static func getAlbumId() -> String{
+        let optionValue = UserDefaults.standard.value(forKey: "ALBUM_ID")
+        if optionValue != nil {
+            return optionValue as! String
+        }
+        return ""
+    }
+    
+    // 设置上一次播放的专辑ID
+    static func setAlbumId(_ albumId: String){
+        UserDefaults.standard.setValue(albumId, forKey: "ALBUM_ID")
+    }
+    
+    // 获取上一次播放的歌曲ID
+    static func getSongId() -> String{
+        let optionValue = UserDefaults.standard.value(forKey: "SONG_ID")
+        if optionValue != nil {
+            return optionValue as! String
+        }
+        return ""
+    }
+    
+    // 设置上一次播放的歌曲ID
+    static func setSongId(_ songId: String){
+        UserDefaults.standard.setValue(songId, forKey: "SONG_ID")
+    }
 }
 
 enum LoopStyle : Int {

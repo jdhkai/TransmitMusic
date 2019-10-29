@@ -41,7 +41,7 @@
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
                                 </group>
-                                <group width="1" alignment="left" verticalAlignment="center" id="ACV-zt-ps0">
+                                <group width="1" alignment="left" verticalAlignment="center" spacing="5" id="ACV-zt-ps0">
                                     <items>
                                         <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="shuffle" catalog="system" id="B02-PK-Mdv">
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                                         <button width="20" height="20" alignment="left" verticalAlignment="center" backgroundImage="music.note.list" catalog="system" id="5Up-J0-RIA">
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="e8V-QN-PQb" kind="push" id="CQi-gU-PwY"/>
+                                                <segue destination="e8V-QN-PQb" kind="push" id="0fW-4C-MJU"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -121,6 +121,40 @@
             </objects>
             <point key="canvasLocation" x="5754.1304347826081" y="935.75892857142856"/>
         </scene>
+        <!--歌曲列表-->
+        <scene sceneID="3wk-HR-Tze">
+            <objects>
+                <controller identifier="AlbumSongController" title="歌曲列表" id="qcQ-al-Np9" customClass="AlbumSongController" customModule="TransmitMusic_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="GYl-xT-tTC">
+                            <items>
+                                <tableRow identifier="ItemAlbumSongRowController" id="4WU-BY-V8e" customClass="ItemAlbumSongRowController" customModule="TransmitMusic_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="Zpp-3I-zet">
+                                        <items>
+                                            <group alignment="left" verticalAlignment="center" radius="8" id="l1B-um-aQI">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" id="lcJ-8m-4Yj"/>
+                                                </items>
+                                            </group>
+                                            <label width="121" alignment="left" verticalAlignment="center" text="歌曲名称" textAlignment="left" id="O9j-P0-ojY"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="coverImage" destination="lcJ-8m-4Yj" id="wap-ZO-N4u"/>
+                                        <outlet property="songNameLabel" destination="O9j-P0-ojY" id="ioO-Cg-u5X"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="songTable" destination="GYl-xT-tTC" id="36W-TI-Vtj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6056" y="553"/>
+        </scene>
         <!--专辑列表-->
         <scene sceneID="bs8-V2-ccH">
             <objects>
@@ -136,7 +170,7 @@
                                                     <imageView width="40" height="40" alignment="left" id="2jN-yT-ZeX"/>
                                                 </items>
                                             </group>
-                                            <label alignment="left" verticalAlignment="center" text="专辑名称" id="2cJ-mf-8bq">
+                                            <label width="121" alignment="left" verticalAlignment="center" text="专辑名称" id="2cJ-mf-8bq">
                                                 <fontDescription key="font" type="system" weight="heavy" pointSize="16"/>
                                             </label>
                                         </items>
@@ -156,12 +190,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="6065" y="823"/>
+            <point key="canvasLocation" x="6064.565217391304" y="822.67857142857144"/>
         </scene>
         <!--播放列表-->
         <scene sceneID="M7Z-68-RAt">
             <objects>
-                <controller identifier="SongController" title="播放列表" id="e8V-QN-PQb" customClass="SongController" customModule="TransmitMusic_WatchKit_Extension">
+                <controller identifier="SongController" title="播放列表" id="e8V-QN-PQb" customClass="PlaylistController" customModule="TransmitMusic_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="9f6-ra-eoE">
                             <items>
@@ -173,7 +207,7 @@
                                                     <imageView width="40" height="40" alignment="left" id="Hur-Mx-Fzh"/>
                                                 </items>
                                             </group>
-                                            <label alignment="left" verticalAlignment="center" text="歌曲名称" id="fyq-lI-GBS"/>
+                                            <label width="121" alignment="left" verticalAlignment="center" text="歌曲名称" id="fyq-lI-GBS"/>
                                         </items>
                                         <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
                                     </group>
@@ -190,7 +224,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="6065" y="1088"/>
+            <point key="canvasLocation" x="6064.565217391304" y="1087.5446428571429"/>
         </scene>
         <!--本地音乐-->
         <scene sceneID="1aS-UI-cQd">
@@ -259,6 +293,11 @@
                             </connections>
                         </switch>
                         <label alignment="left" text="允许扬声器播放后，在没有连接蓝牙耳机的情况下会使用扬声器播放。" numberOfLines="0" id="suu-rB-hcG">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <switch width="1" alignment="left" enabled="NO" title="跳过错误文件" id="hOA-r1-Rsv"/>
+                        <label alignment="left" text="当出现播放错误，直接播放下一首歌曲。" numberOfLines="0" id="5nq-YF-YjR">
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>

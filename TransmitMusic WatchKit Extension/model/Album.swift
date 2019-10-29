@@ -10,14 +10,14 @@ import Foundation
 // 专辑实体类
 struct Album {
     // 专辑编号
-    var albumId : String;
+    var albumId : String
     
     // 专辑名称
-    var albumName : String;
+    var albumName : String
     
     // 专辑艺术家
-    var albumArtistName: String;
+    var albumArtistName: String
     
     // 专辑封面图
-    var albumThumbnail: String;
+    var albumThumbnail: String
 }
