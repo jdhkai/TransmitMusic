@@ -10,7 +10,7 @@ import Foundation
 import WatchKit
 import WatchConnectivity
 
-class FileTransferController : InterfaceController{
+class FileTransferController : WKInterfaceController{
     
     // 更新专辑通知
     static let ALBUM_UPDATE = Notification.Name.init("ALBUM_UPDATE")

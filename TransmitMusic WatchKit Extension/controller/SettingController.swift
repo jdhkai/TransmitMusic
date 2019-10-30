@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import WatchKit
 
-class SettingController : InterfaceController{
+class SettingController : WKInterfaceController{
     
     @IBOutlet weak var speakerSwitch: WKInterfaceSwitch!
     

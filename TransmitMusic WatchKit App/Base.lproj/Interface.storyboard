@@ -6,20 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
-        <!--正在播放-->
-        <scene sceneID="2ey-92-U28">
-            <objects>
-                <controller title="正在播放" id="Q84-cq-FzM" customClass="InterfaceController" customModule="TransmitMusic_WatchKit_Extension">
-                    <items>
-                        <nowPlayingView alignment="left" id="SIb-C9-jeL"/>
-                    </items>
-                    <connections>
-                        <segue destination="uTv-Xi-Heo" kind="relationship" relationship="nextPage" id="gCM-8c-cr7"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="5549" y="1390"/>
-        </scene>
         <!--音乐播放-->
         <scene sceneID="usC-pY-4iF">
             <objects>
@@ -225,34 +211,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="6064.565217391304" y="1087.5446428571429"/>
-        </scene>
-        <!--本地音乐-->
-        <scene sceneID="1aS-UI-cQd">
-            <objects>
-                <controller title="本地音乐" id="uTv-Xi-Heo" customClass="LocalMusicController" customModule="TransmitMusic_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="dko-r6-ko3">
-                            <items>
-                                <tableRow identifier="ItemMusicRowController" id="gVr-tR-I2J" customClass="ItemMusicRowController" customModule="TransmitMusic_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="bnl-qU-I0K">
-                                        <items>
-                                            <label width="1" height="100" alignment="left" text="歌曲名称" textAlignment="left" id="jUW-6C-Ft6"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="titleLabel" destination="jUW-6C-Ft6" id="uVX-RG-xeT"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="musicTable" destination="dko-r6-ko3" id="G7r-bz-5tS"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="5844" y="1391"/>
         </scene>
         <!--远程同步-->
         <scene sceneID="Plj-Aw-T1Z">
