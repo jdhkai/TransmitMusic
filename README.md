@@ -8,7 +8,7 @@
 
 如果跑步或健身时不想随身携带手机，那么此应用将会是你的最佳选择（当然，你也可以为此花费每月10元订阅苹果的“音乐”服务）。
 
-<img style="width:150px;height:auto;" src="Preview/音乐播放.PNG" /><img style="width:150px;height:auto;" src="Preview/专辑列表.PNG" /><img style="width:150px;height:auto;" src="Preview/所有歌曲.PNG" /><img style="width:150px;height:auto;" src="Preview/远程同步.PNG" />
+<img width="150px" src="Preview/音乐播放.PNG" /><img style="width:150px;height:auto;" src="Preview/专辑列表.PNG" /><img style="width:150px;height:auto;" src="Preview/所有歌曲.PNG" /><img style="width:150px;height:auto;" src="Preview/远程同步.PNG" />
 
 <img style="width:150px;height:auto;" src="Preview/设置.PNG" />
 
