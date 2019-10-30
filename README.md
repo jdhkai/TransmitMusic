@@ -1,5 +1,9 @@
 #  五点半音乐
 
+[![Platform](https://img.shields.io/badge/platform-%20watchOS%20%7C%20iOS-lightgray.svg)]()
+[![Language](https://img.shields.io/badge/swift-5.0-orange.svg)](http://swift.org)
+[![Tool](http://img.shields.io/badge/Xcode11.1-blue.svg)](https://developer.apple.com/xcode/)
+
 ## 存在的问题
 
 - [ ] 基于`Page-Based`的页面模式，在页面滑动切换时很大机率会出现空白
